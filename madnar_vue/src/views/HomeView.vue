@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <section class="hero is-medium is-dark mb-6">
-      <div class="hero-body has-text-centered">
-        <p class="title mb-6">
-          Welcome to MadNar
+    <section class="hero is-medium mb-6">
+      <div class="text hero-body has-text-centered">
+        <p class="title  has-text-light">
+          <span class='first'>Welcome to MadNar </span>
         </p>
         <p class="subtitle">
           Experience the best quality with us!
@@ -67,6 +67,57 @@ export default {
   }
 }
 </script>
+<!-- <style scoped>
+.first{
+  color: rgb(15, 15, 15);
+  position: relative;
+  bottom: 70px;
+  opacity: 1;
+}
+/* .first {
+  background-color: rgb(76, 75, 75); 
+} */
+.home .hero::before {
+  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
+  background-size: cover;
+  /* background-position: c; */
+  background-position-x: left 800px;
+  opacity: 0.5;
+  /* background-position: center center; */
+}
+</style> -->
+
+<style scoped>
+.home .hero::before {
+  content: "";
+  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+}
+  
+  .text {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .first {
+    color: rgb(15, 15, 15);
+    position: relative;
+    bottom: 70px;
+    opacity: 1;
+  }
+  
+  .columns {
+    margin-top: 50px;
+  }
+</style>
+
+
 
 
 <!-- <style scoped>
