@@ -90,6 +90,7 @@ export default {
   .is-size-2{
     color: rgb(15, 15, 15);
     position: relative;
+    margin-top: 1%;
   }
   .first {
     color: rgb(15, 15, 15);
