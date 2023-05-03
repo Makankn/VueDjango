@@ -8,7 +8,7 @@
 
                 <h1 class="title">{{ product.name }}</h1>
 
-                <p> {{ product.description }}</p>
+                <p class="text"> {{ product.description }}</p>
             </div>
 
             <div class="column is-3">
@@ -33,14 +33,12 @@
 <script>
 import axios from 'axios'
 import {toast} from 'bulma-toast'
-
 export default {
     name: 'Product',
     data () {
         return {
             product : {},
             quantity : 1
-
         }
     },
     mounted() {
@@ -50,7 +48,6 @@ export default {
         getProduct() {
             const category_slug = this.$route.params.category_slug
             const product_slug = this.$route.params.product_slug
-
             axios
                 .get(`/api/v1/products/${category_slug}/${product_slug}`)
                 .then(response => {
@@ -64,7 +61,6 @@ export default {
             if (isNaN(this.quantity) || this.quantity <1){
                 this.quantity=1
             }
-
             const item ={
                 product :this.product, 
                 quantity:this.quantity
@@ -81,13 +77,23 @@ export default {
         }
     }
 }
-
 </script>
 
 
 <style scoped>
 .resize {
+    margin-left:auto;
+    margin-right:auto;
     width: 400px;
     height: auto;
+}
+.text{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+.control a:hover {
+    background-color: #00b627;
+    color: #fff;
 }
 </style>
