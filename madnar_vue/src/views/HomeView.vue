@@ -86,7 +86,11 @@ export default {
     position: relative;
     z-index: 1;
   }
-  
+
+  .is-size-2{
+    color: rgb(15, 15, 15);
+    position: relative;
+  }
   .first {
     color: rgb(15, 15, 15);
     position: relative;
