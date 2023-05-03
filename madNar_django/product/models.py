@@ -71,4 +71,4 @@ class Product(models.Model):
 
         return thumbnail
 
-    
+
