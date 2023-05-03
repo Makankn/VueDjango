@@ -1,4 +1,7 @@
+
 <template>
+  <link rel="icon" type="image/png" href="C:\Users\AsusIran\Desktop\8\Modiriat Prozheh\VueDjango\madnar_vue\assets\icons8-recent-celebrity-30.png">
+  <a target="_blank" href="https://icons8.com/icon/33139/recent-celebrity">Recent Celebrity</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
   <div id="wrapper">
     <nav class="navbar is-dark">
       <div class="navbar-brand">
@@ -36,7 +39,20 @@
     </section>
 
     <footer class="footer">
-      <p class="has-text-centered">SUTIC</p>
+      
+      <div class="footer-icons">
+        <br>
+        <center><a href="https://www.google.com/"><img src="https://cdn.icon-icons.com/icons2/3237/PNG/512/instagram_logo_brand_social_media_application_icon_197362.png" alt="Instagram" style="width:42px;height:42px;"></a>
+        <a href="https://www.google.com/"><img src="https://th.bing.com/th/id/R.4836fdca1a992b4e59c88f2cff7be154?rik=DlgRDEq6A05pyA&riu=http%3a%2f%2fmosaic5g.io%2fimg%2flogos%2fSharif-University-of-Technology_Logo.png&ehk=ZfxsOMD7ToiFM5Dtq8ppG501GXuGrlWPjwr8U9Ja6zI%3d&risl=&pid=ImgRaw&r=0" alt="University" style="width:42px;height:42px;"></a>
+        <a href="https://www.github.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" style="width:42px;height:42px;"></a></center>
+      </div>
+      <div class="footer-text">
+        <br>
+        <center>
+        <p><a href="/html/default.asp">About us</a></p>
+        <p><a href="/html/default.asp">Cantact us</a></p></center>
+
+      </div>
     </footer>
     
   </div>
@@ -53,7 +69,21 @@ export default {
 }
 </script>
 
+<style>
+
+
+.footer-icons a {
+  margin: 0 10px; /* adds spacing between the icons */
+}
+.footer-text a {
+  display: inline-block;
+  
+}
+
+</style>
 
 <style lang="scss">
 @import '../node_modules/bulma';
 </style>
+
+
