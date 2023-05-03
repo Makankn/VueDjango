@@ -1,8 +1,6 @@
 
 
 <template>
-  <link rel="icon" type="image/png" href="C:\Users\AsusIran\Desktop\8\Modiriat Prozheh\VueDjango\madnar_vue\assets\icons8-recent-celebrity-30.png">
-  <a target="_blank" href="https://icons8.com/icon/33139/recent-celebrity">Recent Celebrity</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
   <div id="wrapper">
     <nav class="navbar is-dark">
       <div class="icon_start">
