@@ -52,15 +52,15 @@
         <div class="columns">
           <div class="column is-4">
             <h2 class="title is-4">About Us</h2>
-            <p>We are a team of developers passionate about creating amazing web applications that help people solve real-world problems.</p>
+            <p>This is our course project as a group of four developers who are passionate about building incredible web applications. .</p>
           </div>
           <div class="column is-4">
             <h2 class="title is-4">Contact Us</h2>
             <p>Feel free to reach out to us at:</p>
             <ul>
-              <li><i class="fas fa-envelope"></i> <a href="mailto:contact@madnar.com">contact@madnar.com</a></li>
-              <li><i class="fas fa-phone"></i> <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></li>
-              <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown, USA</li>
+              <li><i class="fas fa-envelope"></i> <a href="edu.sharif.edu">edu.sharif.edu</a></li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+ 98 (76) 444 22299">+ 98 (76) 444 22299</a></li>
+              <li><i class="fas fa-map-marker-alt"></i> Kish Island, Sharif University of Technology</li>
             </ul>
           </div>
           <div class="column is-4">
