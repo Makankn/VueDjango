@@ -57,30 +57,36 @@
     </section>
 
     <footer class="footer">
-      
-      <div class="footer-icons">
-        <br>
-        <center><a href="https://www.google.com/"><img src="https://cdn.icon-icons.com/icons2/3237/PNG/512/instagram_logo_brand_social_media_application_icon_197362.png" alt="Instagram" style="width:42px;height:42px;"></a>
-        <a href="https://www.google.com/"><img src="https://th.bing.com/th/id/R.4836fdca1a992b4e59c88f2cff7be154?rik=DlgRDEq6A05pyA&riu=http%3a%2f%2fmosaic5g.io%2fimg%2flogos%2fSharif-University-of-Technology_Logo.png&ehk=ZfxsOMD7ToiFM5Dtq8ppG501GXuGrlWPjwr8U9Ja6zI%3d&risl=&pid=ImgRaw&r=0" alt="University" style="width:42px;height:42px;"></a>
-        <a href="https://www.github.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" style="width:42px;height:42px;"></a></center>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <h2 class="title is-4">About Us</h2>
+            <p>We are a team of developers passionate about creating amazing web applications that help people solve real-world problems.</p>
+          </div>
+          <div class="column is-4">
+            <h2 class="title is-4">Contact Us</h2>
+            <p>Feel free to reach out to us at:</p>
+            <ul>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:contact@madnar.com">contact@madnar.com</a></li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></li>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown, USA</li>
+            </ul>
+          </div>
+          <div class="column is-4">
+            <h2 class="title is-4">Follow Us</h2>
+            <p>Stay up-to-date with the latest news and promotions:</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-text">
-        <br>
-        <center>
-        <p><a href="/html/default.asp">About us</a></p>
-        <p><a href="/html/default.asp">Cantact us</a></p></center>
-
-      </div>
-      <span class="icon"> 
-        <i class ='is-instagram'></i>
-      </span>
     </footer>
-
-    
   </div>
-  
 </template>
-
 
 <script>
 export default {
@@ -112,19 +118,31 @@ export default {
 }
 </script>
 
-
-
-<style>
-
-
-.footer-icons a {
-  margin: 0 10px; /* adds spacing between the icons */
-}
-.footer-text a {
-  display: inline-block;
-  
+<style scoped>
+.footer {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 50px 0;
 }
 
+.footer h2 {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
 </style>
 
 <style lang="scss">
