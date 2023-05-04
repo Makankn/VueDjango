@@ -21,7 +21,7 @@
         v-for="product in latestProducts"
         v-bind:key="product.id">
 
-        <div class="box">
+        <div class="box ">
           <figure class="image mb-4">
             <img v-bind:src="product.get_thumbnail">
           </figure>
@@ -70,7 +70,13 @@ export default {
 
 
 <style scoped>
+.box {
+  width: 6cm;
+}
+.image{
+  width: 6cm;
 
+}
 .home .hero::before {
   content: "";
   background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
