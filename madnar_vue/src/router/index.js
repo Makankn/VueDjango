@@ -21,6 +21,16 @@ const routes = [
     path: '/:category_slug/:product_slug/',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/log-in',
+    name: 'login',
+    component: () => import('../views/LoginView.vue')
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/RegisterView.vue')
   }
 ]
 
