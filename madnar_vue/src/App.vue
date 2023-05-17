@@ -67,10 +67,10 @@
             <h2 class="title is-4">Follow Us</h2>
             <p>Stay up-to-date with the latest news and promotions:</p>
             <div class="social-icons">
-              <a href="#"><i class="fa fa-university"></i></a>
+              <a href="https://www.kish.ac.ir/IPPWebV1C041/Persian_WebUI/Default.aspx"><i class="fa fa-university"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/Makankn/VueDjango"><i class="fab fa-github"></i></a>
             </div>
           </div>
         </div>
