@@ -36,7 +36,8 @@
 
         <div class="navbar-item">
           <div class="buttons">
-            <router-link to="/log-in" class="button is-light">Log in</router-link>
+            <router-link to="/sign-up" class="button signup is-rounded">Sign up</router-link>
+            <router-link to="/log-in" class="button login is-rounded">Log in</router-link>
           </div>
         </div>
       </div>
@@ -117,11 +118,24 @@ export default {
 
 <style scoped>
 
+
+ .login:hover,
+.signup:hover{
+  color: #ffffff;
+  background-color: rgba(72, 199, 142, 0.7);
+  border: none; 
+  
+ } 
 .navbar {
   background-color: #000000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-
+.login,
+.signup{
+  width: 80px;
+  height: 40px;
+  font-size: medium;
+}
 .navbar-item:hover {
   background-color: transparent !important;
 }

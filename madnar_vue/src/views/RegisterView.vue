@@ -86,7 +86,7 @@
   height: 45px;
   width: 100%;
   outline: none;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 0 0 3px 55px;
   background: rgba(72, 199, 142, 0.1);
 }
@@ -108,7 +108,7 @@
 
 .submit{
   border:  none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 15px;
   height: 45px;
   width: 100%;
