@@ -4,6 +4,7 @@ import Product from '../views/Product.vue'
 import Login from '../views/loginNew.vue'
 import Register from '../views/RegisterView.vue'
 import Checkout from "../views/Checkout.vue"
+import Cart from "../views/addToCart.vue"
 
 
 const routes = [
@@ -26,7 +27,12 @@ const routes = [
     path: '/log-in',
     name: 'login',
     component: Login
-    },
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+  },
   {
     path: '/about',
     name: 'about',

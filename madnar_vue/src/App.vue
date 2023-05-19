@@ -120,7 +120,8 @@ export default {
 
 
  .login:hover,
-.signup:hover{
+.signup:hover,
+.cart:hover{
   color: #ffffff;
   background-color: rgba(72, 199, 142, 0.7);
   border: none; 
@@ -131,7 +132,8 @@ export default {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .login,
-.signup{
+.signup,
+.cart{
   width: 80px;
   height: 40px;
   font-size: medium;
