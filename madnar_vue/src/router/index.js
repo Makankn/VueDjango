@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Product from '../views/Product.vue'
 import Login from '../views/loginNew.vue'
 import Register from '../views/RegisterView.vue'
+import Cart from "../views/addToCart.vue"
 import Payment from "../views/PaymentVie.vue"
 
 
@@ -26,7 +27,12 @@ const routes = [
     path: '/log-in',
     name: 'login',
     component: Login
-    },
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+  },
   {
     path: '/about',
     name: 'about',

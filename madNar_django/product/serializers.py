@@ -21,4 +21,3 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ("id",
                   "name"
                   )
-        
