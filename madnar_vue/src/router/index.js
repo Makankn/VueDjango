@@ -4,6 +4,7 @@ import Product from '../views/Product.vue'
 import Login from '../views/loginNew.vue'
 import Register from '../views/RegisterView.vue'
 import Checkout from "../views/Checkout.vue"
+import Payment from "../views/PaymentVie.vue"
 
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     path:'/sign-up',
     name: 'signup',
     component: Register
+  },
+  {
+    path:'/payment',
+    name: 'payment',
+    component: Payment
   },
   {
     path: '/log-in',
