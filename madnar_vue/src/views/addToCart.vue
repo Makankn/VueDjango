@@ -34,7 +34,7 @@
           <p>
             Total Items: <strong>{{ cartTotalLength }}</strong>
           </p>
-          <button class="checkout-button" @click="checkout">Checkout</button>
+          <button  class="checkout-button" @click="checkout">Checkout</button>
         </div>
       </div>
   

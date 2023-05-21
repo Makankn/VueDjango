@@ -3,8 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import Product from '../views/Product.vue'
 import Login from '../views/loginNew.vue'
 import Register from '../views/RegisterView.vue'
-import Checkout from "../views/Checkout.vue"
 import Cart from "../views/addToCart.vue"
+import Payment from "../views/PaymentVie.vue"
 
 
 const routes = [
@@ -14,14 +14,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/checkout',
-    name: 'checkout',
-    component: Checkout
-  },
-  {
     path:'/sign-up',
     name: 'signup',
     component: Register
+  },
+  {
+    path:'/payment',
+    name: 'payment',
+    component: Payment
   },
   {
     path: '/log-in',
