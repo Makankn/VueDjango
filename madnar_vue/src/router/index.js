@@ -3,7 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import Product from '../views/Product.vue'
 import Login from '../views/loginNew.vue'
 import Register from '../views/RegisterView.vue'
-import Checkout from "../views/Checkout.vue"
 import Payment from "../views/PaymentVie.vue"
 
 
@@ -12,11 +11,6 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
-  },
-  {
-    path: '/checkout',
-    name: 'checkout',
-    component: Checkout
   },
   {
     path:'/sign-up',
