@@ -2,8 +2,8 @@
   <div class="home">
     <section class="hero is-medium mb-6">
       <div class="text hero-body has-text-centered">
-        <p class="title  has-text-light">
-          <span class='first'>Welcome to MadNar </span>
+        <p class="title has-text-light">
+          <span class="first">Welcome to MadNar</span>
         </p>
         <p class="subtitle">
           Experience the best quality with us!
@@ -16,20 +16,22 @@
         <h2 class="is-size-2 has-text-centered">Latest products</h2>
       </div>
 
-      <div 
-        class="column is-3" 
+      <div
+        class="column is-3"
         v-for="product in latestProducts"
-        v-bind:key="product.id">
-
-        <div class="box">
+        :key="product.id">
+      <div class="box">
           <figure class="image mb-4">
             <img v-bind:src="product.get_thumbnail">
           </figure>
 
-          <h3 class="is-size-4">{{ product.name }}</h3>
-          <p class="is-size-6 has-text-grey">{{ product.price }}T</p>
-
-          <router-link v-bind:to="product.get_absoulute_url" class="button is-dark mt-4">View Details</router-link>
+          <div class="product-details">
+            <h3 class="is-size-4">{{ product.name }}</h3>
+            <p class="is-size-6 has-text-grey">{{ product.price }}T</p>
+          </div>
+          <router-link :to="product.get_absoulute_url" class="button is-dark mt-4">View Details</router-link>
+          <!-- <img :src="product.get_thumbnail"> -->
+          <!-- <router-link v-bind:to="product.get_absolute_url" class="button is-dark mt-4">foo</router-link>  -->
         </div>
       </div>
     </div>
@@ -67,7 +69,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 .home .hero::before {
