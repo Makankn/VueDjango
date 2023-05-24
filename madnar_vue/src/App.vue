@@ -138,11 +138,13 @@ export default {
 
 <style scoped>
 
+
 .input{
   width: 140px;
   border-radius: 20px;
   margin-top: 5px;
   background-color: white; 
+  height: 45px;
   padding: 5px;
 }
 
@@ -182,6 +184,8 @@ export default {
 .navbar {
   background-color: #000000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
 }
 .login,
 .signup,

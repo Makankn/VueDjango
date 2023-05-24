@@ -73,6 +73,7 @@
   justify-content: center;
   max-width: 60vh;
   margin:0 auto;
+  background: linear-gradient(to left, #ffffff , #058958);
 }
 
 .container{

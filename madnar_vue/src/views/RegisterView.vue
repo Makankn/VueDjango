@@ -1,41 +1,43 @@
 <template>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <div class="box">
-    <div class="container">
-      <div class="top-header">
-        <span class="span">Don't have an account?</span>
-        <header class="header">Register</header>
-      </div>
+  <div class="register-view">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <div class="box">
+      <div class="container">
+        <div class="top-header">
+          <span class="span">Don't have an account?</span>
+          <header class="header">Register</header>
+        </div>
 
-      <div class="input-field">
-        <input type="text" class="input" placeholder="Name" required>
-        <i class="material-icons">label</i>
-      </div>
-      <div class="input-field">
-        <input type="text" class="input" placeholder="Email" required>
-        <i class="material-icons">mail</i>
-      </div>
-      <div class="input-field">
-        <input type="password" class="input" placeholder="Password" required>
-        <i class="material-icons">lock</i>
-      </div>
-      <div class="input-field">
-        <input type="password" class="input" placeholder="Re-type Password" required>
-        <i class="material-icons">loop</i>
-      </div>
-      <div class="policies">
-        <input type="checkbox" id="check">
-        <label class="span" for="check">I have read and agree</label>
-        <label class="policylabel"><a href="#">privacy policies</a></label>
-      </div>
-      <div class="input-field">
-        <input type="submit" class="submit" value="Register">
-      </div>
+        <div class="input-field">
+          <input type="text" class="input" placeholder="Name" required>
+          <i class="material-icons">label</i>
+        </div>
+        <div class="input-field">
+          <input type="text" class="input" placeholder="Email" required>
+          <i class="material-icons">mail</i>
+        </div>
+        <div class="input-field">
+          <input type="password" class="input" placeholder="Password" required>
+          <i class="material-icons">lock</i>
+        </div>
+        <div class="input-field">
+          <input type="password" class="input" placeholder="Re-type Password" required>
+          <i class="material-icons">loop</i>
+        </div>
+        <div class="policies">
+          <input type="checkbox" id="check">
+          <label class="span" for="check">I have read and agree</label>
+          <label class="policylabel"><a href="#">privacy policies</a></label>
+        </div>
+        <div class="input-field">
+          <input type="submit" class="submit" value="Register">
+        </div>
 
-      <div class="login">
-        <span class="span">Have an account?</span>
-        <label class="loginlabel"><a href="../log-in">Login</a></label>
+        <div class="login">
+          <span class="span">Have an account?</span>
+          <label class="loginlabel"><a href="../log-in">Login</a></label>
+        </div>
       </div>
     </div>
   </div>
@@ -45,7 +47,8 @@
 
 </script>
 
-<style>
+<style scoped>
+
 
 .box{
   font-family: "Didact Gothic", sans-serif;

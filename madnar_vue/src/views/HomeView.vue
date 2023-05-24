@@ -75,6 +75,12 @@ export default {
 
 
 <style scoped>
+
+.is-size-2{
+  /* padding-top: 60px;  */
+  margin-top: 50px;
+  color: black;
+}
 .home .hero::before {
   content: "";
   background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
@@ -85,6 +91,10 @@ export default {
   left: 0;
   width: 100%;
   height: 85%;
+}
+
+.hero{
+  margin: 40px;
 }
   
   .text {
