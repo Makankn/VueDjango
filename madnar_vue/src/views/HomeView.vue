@@ -21,7 +21,7 @@
         v-for="product in latestProducts"
         v-bind:key="product.id">
 
-        <div class="box ">
+        <div class="box">
           <figure class="image mb-4">
             <img v-bind:src="product.get_thumbnail">
           </figure>
@@ -69,29 +69,24 @@ export default {
 </script>
 
 
-<!-- <style scoped>
-.box {
-  width: 6cm;
-}
-.image{
-  width: 6cm;
-
-}
-
-.hero{
-  margin: 10%;
+<style scoped>
+.home .hero::before {
+  content: "";
+  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
 }
   
   .text {
     position: relative;
     z-index: 1;
   }
-
-  .is-size-2{
-    color: rgb(15, 15, 15);
-    position: relative;
-    margin-top: 1%;
-  }
+  
   .first {
     color: rgb(15, 15, 15);
     position: relative;
@@ -102,7 +97,7 @@ export default {
   .columns {
     margin-top: 50px;
   }
-</style> -->
+</style>
 
 
 
@@ -113,15 +108,4 @@ export default {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
   }
-  .home .hero::before {
-  content: "";
-  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
-  background-size: cover;
-  opacity: 0.5;
-  position: absolute;
-  top: 1cm;
-  left: 0;
-  width: 100%;
-  height: 85%;
-}
 </style>
