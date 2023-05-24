@@ -29,6 +29,22 @@
         </div>
       </div>
 
+      <form method="get" action="/search">
+            <div class="field has-addons">
+              <div class="control">
+                <input type="text" class="input" placeholder="Search into items" name="query">
+              </div>
+
+              <div class="control">
+                <button class="button is-success">
+                  <span class=icon>
+                  <i class="fas fa-search"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+
       <div class="navbar-end">
         <router-link to="/cart" class="navbar-item">
           <span class="icon has-badge-rounded has-badge-success" :data-count="cartTotalLength"><i class="fas fa-shopping-cart"></i></span>
@@ -122,6 +138,38 @@ export default {
 
 <style scoped>
 
+.input{
+  width: 140px;
+  border-radius: 20px;
+  margin-top: 5px;
+  background-color: white; 
+  padding: 5px;
+}
+
+.input::placeholder{
+  text-align: center;
+}
+
+.input:hover{
+  width: 200px;
+  border-radius: 20px;
+  margin-top: 5px;
+  border-color: green;
+  box-shadow: 0px 0px 5px #0d4b07;
+}
+
+.button:hover{
+  border-color: green;
+  box-shadow: 0px 0px 5px #0d4b07;
+
+}
+
+
+.button{
+  height:45.2px;
+  border-radius: 20px;
+  margin-top: 5px;
+}
 
  .login:hover,
 .signup:hover,
