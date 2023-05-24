@@ -30,9 +30,10 @@
           <div class="product-details">
             <h3 class="is-size-4">{{ product.name }}</h3>
             <p class="is-size-6 has-text-grey">{{ product.price }}T</p>
+            <router-link :to="product.get_absoulute_url" class="button is-dark">View Details</router-link>
           </div>
         </div>
-          <router-link :to="product.get_absoulute_url" class="button is-dark">View Details</router-link>
+          <!-- <router-link :to="product.get_absoulute_url" class="button is-dark">View Details</router-link> -->
 
         </div>
       </div>
