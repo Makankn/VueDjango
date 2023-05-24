@@ -129,9 +129,15 @@ export default {
     margin-right:auto;
 }
 .control a:hover {
-    background-color: #00b627;
+    background-color: black;
     color: #fff;
     
+}
+.button{
+    background-color: rgba(72, 199, 142, 0.7);;
+}
+.button ,.input{
+    border-radius: 20px;
 }
 .product-colors span {
     width: 26px;

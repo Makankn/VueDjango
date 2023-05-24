@@ -15,9 +15,9 @@
     <div class="col-75">
         
         <div class="container">
-            <div class="checkout">
-                <h1 ><b>Checkout Form</b></h1>
-            </div>
+            <!-- <div class="checkout">
+                <h1 style="text-align: center;"><b>Checkout Form</b></h1>
+            </div> -->
             <form action="/action_page.php">
 
                 <div class="row">
@@ -97,19 +97,14 @@
 
 <style scoped>
 body {
-
     font-family: "Didact Gothic", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-size: 22px;
+    min-height: 100vh;
     padding: 8px;
-    max-width: 60vh;
-    margin: 0 auto;
-    
-    
 }
+
 
 * {
     box-sizing: border-box;
@@ -152,16 +147,13 @@ body {
 }
 .checkout {
    text-align: center;
-   display: flex;
+   display: block;
   flex-direction: row;
   align-items: center;
   font-size: x-large;
   margin-bottom: -2%;
   margin-top: 5%;
   font-family: "Didact Gothic", sans-serif;
- 
-
-
 
 }
 

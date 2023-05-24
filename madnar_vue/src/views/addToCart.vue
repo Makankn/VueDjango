@@ -20,7 +20,7 @@
               <td>{{ item.quantity }}</td>
               <td>{{ item.product.price * item.quantity }}</td>
               <td>
-                <button class="remove" @click="removeFromCart(item)">Remove</button>
+               <button class="remove" @click="removeFromCart(item)">Remove</button>
               </td>
             </tr>
           </tbody>
@@ -34,7 +34,7 @@
           <p>
             Total Items: <strong>{{ cartTotalLength }}</strong>
           </p>
-          <button  class="checkout-button" @click="checkout">Checkout</button>
+          <router-link :to="{ path: '/payment' }"><button  class="checkout-button" @click="checkout">Checkout</button> </router-link>
         </div>
       </div>
   
@@ -43,42 +43,45 @@
   </template>
   
   <script>
+import { routerViewLocationKey } from 'vue-router';
+
   export default {
-    name: 'Cart',
+    name: "Cart",
     data() {
-      return {
-        cart: {
-          items: []
-        }
-      };
+        return {
+            cart: {
+                items: []
+            }
+        };
     },
     mounted() {
-        this.cart = this.$store.state.cart
-      // Fetch the cart items from the API or Vuex store
-      // and assign them to this.cart.items
+        this.cart = this.$store.state.cart;
+        // Fetch the cart items from the API or Vuex store
+        // and assign them to this.cart.items
     },
     methods: {
-      removeFromCart(item) {
-        this.cart.items = this.cart.items.filter(i => i.product.id !== item.product.id)
-        // Remove the item from the cart
-        // using the provided item.product.id
-      },
-      checkout() {
-        // Redirect the user to the checkout page
-        // using the router or window.location
-      }
+        removeFromCart(item) {
+            this.cart.items = this.cart.items.filter(i => i.product.id !== item.product.id);
+            // Remove the item from the cart
+            // using the provided item.product.id
+        },
+        checkout() {
+            // Redirect the user to the checkout page
+            // using the router or window.location
+        }
     },
     computed: {
-      cartTotalLength() {
-        // Calculate and return the total number of items in the cart
-        return this.cart.items.reduce((acc, curVal) => acc + curVal.quantity, 0);
-      },
-      cartTotalPrice() {
-        // Calculate and return the total price of items in the cart
-        return this.cart.items.reduce((acc, curVal) => acc + curVal.product.price * curVal.quantity, 0);
-      },
-    }
-  };
+        cartTotalLength() {
+            // Calculate and return the total number of items in the cart
+            return this.cart.items.reduce((acc, curVal) => acc + curVal.quantity, 0);
+        },
+        cartTotalPrice() {
+            // Calculate and return the total price of items in the cart
+            return this.cart.items.reduce((acc, curVal) => acc + curVal.product.price * curVal.quantity, 0);
+        },
+    },
+    components: { routerViewLocationKey }
+};
   </script>
   
   <style scoped>
