@@ -54,10 +54,8 @@ export default {
     this.getLatestProducts()
   },
   methods: {
-    async getLatestProducts() {
-      this.$store.commit('setIsLoading', true)
-
-      await axios
+    getLatestProducts() {
+      axios
         .get('/api/v1/latest-products/')
         .then(response => {
           this.latestProducts = response.data
@@ -65,15 +63,13 @@ export default {
         .catch(error => {
           console.log(error)
         })
-      
-        this.$store.commit('setIsLoading', false)
     }
   }
 }
 </script>
 
 
-<style scoped>
+<!-- <style scoped>
 .box {
   width: 6cm;
 }
@@ -81,17 +77,7 @@ export default {
   width: 6cm;
 
 }
-.home .hero::before {
-  content: "";
-  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
-  background-size: cover;
-  opacity: 0.5;
-  position: absolute;
-  top: 1cm;
-  left: 0;
-  width: 100%;
-  height: 85%;
-}
+
 .hero{
   margin: 10%;
 }
@@ -116,7 +102,7 @@ export default {
   .columns {
     margin-top: 50px;
   }
-</style>
+</style> -->
 
 
 
@@ -127,4 +113,15 @@ export default {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
   }
+  .home .hero::before {
+  content: "";
+  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/upwk61843118-wikimedia-image-kowc5fl7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fa1fe774ca2208773517b43dfd2b4f46');
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 1cm;
+  left: 0;
+  width: 100%;
+  height: 85%;
+}
 </style>

@@ -7,6 +7,7 @@
       <a class="logo navbar-item" href="/">
         <img src="https://img.icons8.com/ios-filled/50/null/dress-back-view.png"/>
       </a>
+
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click="showMobileMenu = !showMobileMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -28,29 +29,12 @@
         </div>
       </div>
 
-      <form method="get" action="/search">
-            <div class="field has-addons">
-              <div class="control">
-                <input type="text" class="input" placeholder="Search into items" name="query" style="background-color: white; text-align:center;">
-              </div>
-
-              <div class="control">
-                <button class="button is-success">
-                  <span class=icon>
-                  <i class="fas fa-search"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </form>
-
       <div class="navbar-end">
         <router-link to="/cart" class="navbar-item">
           <span class="icon has-badge-rounded has-badge-success" :data-count="cartTotalLength"><i class="fas fa-shopping-cart"></i></span>
         </router-link>
 
         <div class="navbar-item">
-          
           <div class="buttons">
             <router-link to="/sign-up" class="button signup is-rounded">Sign up</router-link>
             <router-link to="/log-in" class="button login is-rounded">Log in</router-link>
@@ -138,19 +122,8 @@ export default {
 
 <style scoped>
 
-.input{
-  border-radius: 20px;
-  margin-top: 5px;
-}
 
-
-.button{
-  height:45.2px;
-  border-radius: 20px;
-  margin-top: 5px;
-}
-
-.login:hover,
+ .login:hover,
 .signup:hover,
 .cart:hover{
   color: #ffffff;

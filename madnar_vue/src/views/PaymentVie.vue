@@ -10,7 +10,7 @@
 
 
 
-<div class="row" style="margin-top:10px">
+<div class="row">
    
     <div class="col-75">
         
