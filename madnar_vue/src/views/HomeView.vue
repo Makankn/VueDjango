@@ -132,8 +132,20 @@ export default {
   }
 
   .button{
+    width:180px;
     margin-top: 0px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(72, 199, 142, 0.7);
+    cursor: pointer;
+    display: flex;
+    align-self:flex-start;
   }
+
+  .button:hover {
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
 
 </style>
 
