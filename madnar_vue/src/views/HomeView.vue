@@ -2,8 +2,8 @@
   <div class="home">
     <section class="hero is-medium mb-6">
       <div class="text hero-body has-text-centered">
-        <p class="title  has-text-light">
-          <span class='first'>Welcome to MadNar </span>
+        <p class="title has-text-light">
+          <span class="first">Welcome to MadNar</span>
         </p>
         <p class="subtitle">
           Experience the best quality with us!
@@ -16,20 +16,24 @@
         <h2 class="is-size-2 has-text-centered">Latest products</h2>
       </div>
 
-      <div 
-        class="column is-3" 
+      <div
+        class="column is-3"
         v-for="product in latestProducts"
-        v-bind:key="product.id">
-
-        <div class="box">
-          <figure class="image mb-4">
+        :key="product.id">
+    
+      <div class="box">
+        <div class="container">
+          <figure class="image">
             <img v-bind:src="product.get_thumbnail">
           </figure>
 
-          <h3 class="is-size-4">{{ product.name }}</h3>
-          <p class="is-size-6 has-text-grey">{{ product.price }}T</p>
+          <div class="product-details">
+            <h3 class="is-size-4">{{ product.name }}</h3>
+            <p class="is-size-6 has-text-grey">{{ product.price }}T</p>
+          </div>
+        </div>
+          <router-link :to="product.get_absoulute_url" class="button is-dark">View Details</router-link>
 
-          View details 
         </div>
       </div>
     </div>
@@ -97,15 +101,28 @@ export default {
   .columns {
     margin-top: 50px;
   }
-</style>
 
 
-
-
-<style scoped>
-  .image {
-    margin-top: -1.25rem;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
+  .container{
+    padding: 0 auto;
+    margin-top: 20px;
+    margin-left: 20px;
   }
+  .box{
+    padding: 0;
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+
+  .image {
+    width: 180px;
+    height: 240px;
+  }
+
+  .button{
+    margin-top: 0px;
+  }
+
 </style>
+
