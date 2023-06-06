@@ -152,6 +152,10 @@ export default {
   text-align: center;
 }
 
+input:hover::placeholder {
+  color: transparent;
+}
+
 .input:hover{
   width: 200px;
   border-radius: 20px;
