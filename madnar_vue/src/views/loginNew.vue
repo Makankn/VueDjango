@@ -1,53 +1,109 @@
 <template>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <div class="box">
-    <div class="container">
-      <div class="top-header">
-        <span class="span">Have an account?</span>
-        <header class="header">Login</header>
-      </div>
-
-      <div class="input-field">
-        <input type="text" class="input is-rounded" placeholder="Username" required>
-        <i class="material-icons">person</i>
-      </div>
-      <div class="input-field">
-        <input type="password" class="input is-rounded" placeholder="Password" required>
-        <i class="material-icons">key</i>
-      </div>
-      <div class="input-field is-rounded">
-        <input type="submit" class="submit" value="Login">
-      </div>
-      <div class="logos">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-google"></i>
-      </div>
-
-      <div class="bottom">
-        <div class="left">
-          <input type="checkbox" id="check">
-          <label class="checklabel" for="check">Remember Me</label>
+  <div>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <div class="box">
+      <div class="container">
+        <div class="top-header">
+          <span class="span">Have an account?</span>
+          <header class="header">Login</header>
         </div>
-        <div class="right">
-          <label><a href="#">Forgot password?</a></label>
+    <form @submit.prevent="submitForm">
+        <div class="input-field">
+          <input type="text" class="input is-rounded" placeholder="Username" required v-model="username">
+          <i class="material-icons">person</i>
         </div>
-      </div>
+        <div class="input-field">
+          <input type="password" class="input is-rounded" placeholder="Password" required v-model="password">
+          <i class="material-icons">key</i>
+        </div>
+        <div class="input-field is-rounded">
+          <input type="submit" class="submit" value="Login">
+        </div>
+        <div class="logos">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-google"></i>
+        </div>
 
-      <div class="register">
-        <span class="span">Don't have an account?</span>
-        <label class="reglabel"><a href="../register">Register</a></label>
+        <div class="bottom">
+          <div class="left">
+            <input type="checkbox" id="check">
+            <label class="checklabel" for="check">Remember Me</label>
+          </div>
+          <div class="right">
+            <label><a href="#">Forgot password?</a></label>
+          </div>
+        </div>
+
+        <div class="register">
+          <span class="span">Don't have an account?</span>
+          <label class="reglabel"><a href="../register">Register</a></label>
+        </div>
+    </form>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 
+export default{
+  name: 'Login',
+  data (){
+    return {
+      username: '',
+      password: '',
+      errors: []
+    }
+  },
+  mounted() {
+    document.title = 'Log In | madnar'
+  },
+  methods: {
+    async submitForm() {
+      axios.defaults.headers.common["Authorization"] = ""
+
+      localStorage.removeItem("token")
+
+      const formData = {
+        username: this.username,
+        password: this.password
+      }
+
+
+      await axios
+          .post("/api/v1/token/login/", formData)
+          .then(response => {
+              const token = response.data.auth_token
+
+              this.$store.commit('setToken', token)
+                    
+              axios.defaults.headers.common["Authorization"] = "Token " + token
+
+              localStorage.setItem("token", token)
+
+              const toPath = this.$route.query.to || '/cart'
+
+              this.$router.push(toPath)
+          })
+          .catch(error => {
+              if (error.response) {
+                  for (const property in error.response.data) {
+                        this.errors.push(`${property}: ${error.response.data[property]}`)
+                  }
+              } else {
+                  this.errors.push('Something went wrong. Please try again')
+                        
+                  console.log(JSON.stringify(error))
+              }
+        })
+    }
+  }
+}
 </script>
 
 <style scoped>
-
 .logos{
   display: flex; 
   justify-content: center; 
@@ -158,5 +214,4 @@
 .reglabel{
   margin-left: 5px;
 }
-
 </style>

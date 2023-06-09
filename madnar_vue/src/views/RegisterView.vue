@@ -8,27 +8,30 @@
           <span class="span">Don't have an account?</span>
           <header class="header">Register</header>
         </div>
-
+    <form @submit.prevent="submitForm">
         <div class="input-field">
-          <input type="text" class="input" placeholder="Name" required>
+          <input type="text" class="input" placeholder="Name" required v-model="username">
           <i class="material-icons">label</i>
         </div>
         <div class="input-field">
-          <input type="text" class="input" placeholder="Email" required>
+          <input type="text" class="input" placeholder="Email" required v-model="email">
           <i class="material-icons">mail</i>
         </div>
         <div class="input-field">
-          <input type="password" class="input" placeholder="Password" required>
+          <input type="password" class="input" placeholder="Password" required v-model="password">
           <i class="material-icons">lock</i>
         </div>
         <div class="input-field">
-          <input type="password" class="input" placeholder="Re-type Password" required>
+          <input type="password" class="input" placeholder="Re-type Password" required v-model="reTypePassword">
           <i class="material-icons">loop</i>
         </div>
         <div class="policies">
           <input type="checkbox" id="check">
           <label class="span" for="check">I have read and agree</label>
           <label class="policylabel"><a href="#">privacy policies</a></label>
+        </div>
+        <div class="notification is-danger" v-if="errors.length">
+          <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
         </div>
         <div class="input-field">
           <input type="submit" class="submit" value="Register">
@@ -38,12 +41,79 @@
           <span class="span">Have an account?</span>
           <label class="loginlabel"><a href="../log-in">Login</a></label>
         </div>
+    </form>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import { toast } from 'bulma-toast'
+
+export default {
+  name: 'SignUp',
+  data () {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      reTypePassword: '',
+      errors: []
+    }
+  },
+  methods: {
+  submitForm() {
+    this.errors = [];
+
+    if (this.username === '') {
+      this.errors.push('The username is missing');
+    }
+
+    if (this.password.length < 6) {
+      this.errors.push('The password is too short');
+    }
+
+    if (this.password !== this.reTypePassword) {
+      this.errors.push("The passwords don't match");
+    }
+
+    if (this.errors.length === 0) {
+      const formData = {
+        username: this.username,
+        password: this.password,
+      };
+
+      axios
+        .post('/api/v1/users/', formData)
+        .then((response) => {
+          toast({
+            message: 'Account created, please log in!',
+            type: 'is-success',
+            dismissible: true,
+            pauseOnHover: true,
+            duration: 2000,
+            position: 'bottom-right',
+          });
+
+          this.$router.push('/log-in');
+        })
+        .catch((error) => {
+          if (error.response) {
+            for (const property in error.response.data) {
+              this.errors.push(`${property}: ${error.response.data[property]}`);
+            }
+          } else if (error.message) {
+            this.errors.push('Something went wrong. Please try again');
+          }
+        });
+    }
+  },
+},
+
+              
+            
+}
 
 </script>
 
