@@ -10,11 +10,11 @@
         </div>
     <form @submit.prevent="submitForm">
         <div class="input-field">
-          <input type="text" class="input is-rounded" placeholder="Username" required v-model="username">
+          <input type="text" class="input is-rounded" id="input-new" placeholder="Username" required v-model="username">
           <i class="material-icons">person</i>
         </div>
         <div class="input-field">
-          <input type="password" class="input is-rounded" placeholder="Password" required v-model="password">
+          <input type="password" class="input is-rounded" id="input-new" placeholder="Password" required v-model="password">
           <i class="material-icons">key</i>
         </div>
         <div class="input-field is-rounded">
@@ -165,6 +165,9 @@ export default{
   background: rgba(72, 199, 142, 0.1);
 }
 
+#input-new {
+  z-index: 1;
+}
 .material-icons{
   position: relative;
   top: -35px;
