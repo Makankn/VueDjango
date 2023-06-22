@@ -256,7 +256,7 @@ input:hover::placeholder {
   padding: 50px 0;
 }
 .footer h2 {
-  color: #fff;
+  color: rgba(72, 199, 142, 0.7);
 }
 .social-icons {
   display: flex;
@@ -270,6 +270,8 @@ input:hover::placeholder {
 .social-icons a:last-child {
   margin-right: 0;
 }
+
+
 
 
 </style>
