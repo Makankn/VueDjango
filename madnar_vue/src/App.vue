@@ -51,7 +51,14 @@
         <div class="navbar-item">
           <div class="buttons">
             <router-link to="/sign-up" class="button signup is-rounded">Sign up</router-link>
-            <router-link to="/log-in" class="button login is-rounded">Log in</router-link>
+            <template v-if="$store.state.isAuthenticated">
+              <router-link to="/my-account" class="button account is-rounded">My Account</router-link>
+            </template>
+
+            <template v-else>
+              <router-link to="/log-in" class="button login is-rounded">Log in</router-link>
+            </template>
+            <!-- <router-link to="/log-in" class="button login is-rounded">Log in</router-link> -->
           </div>
         </div>
       </div>
@@ -185,14 +192,28 @@ input:hover::placeholder {
   margin-top: 5px;
 }
 
- .login:hover,
+.login:hover,
 .signup:hover,
+.account:hover,
 .cart:hover{
   color: #ffffff;
   background-color: rgba(72, 199, 142, 0.7);
   border: none; 
-  
- } 
+} 
+
+.login,
+.signup,
+.cart{
+  width: 80px;
+  height: 40px;
+  font-size: medium;
+}
+
+.account{
+  width: 100px;
+  height: 40px;
+  font-size: medium;
+}
 .navbar {
   background-color: #000000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
