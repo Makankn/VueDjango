@@ -10,19 +10,19 @@
         </div>
     <form @submit.prevent="submitForm">
         <div class="input-field">
-          <input type="text" class="input" placeholder="Name" required v-model="username">
+          <input type="text" class="input" id="input-new" placeholder="Name" required v-model="username">
           <i class="material-icons">label</i>
         </div>
         <div class="input-field">
-          <input type="text" class="input" placeholder="Email" required v-model="email">
+          <input type="text" class="input" id="input-new" placeholder="Email" required v-model="email">
           <i class="material-icons">mail</i>
         </div>
         <div class="input-field">
-          <input type="password" class="input" placeholder="Password" required v-model="password">
+          <input type="password" class="input" id="input-new" placeholder="Password" required v-model="password">
           <i class="material-icons">lock</i>
         </div>
         <div class="input-field">
-          <input type="password" class="input" placeholder="Re-type Password" required v-model="reTypePassword">
+          <input type="password" class="input" id="input-new" placeholder="Re-type Password" required v-model="reTypePassword">
           <i class="material-icons">loop</i>
         </div>
         <div class="policies">
@@ -162,6 +162,10 @@ export default {
   border-radius: 20px;
   padding: 0 0 3px 55px;
   background: rgba(72, 199, 142, 0.1);
+}
+
+#input-new {
+  z-index: 1;
 }
 
 .material-icons{
