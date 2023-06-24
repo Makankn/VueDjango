@@ -10,6 +10,7 @@ import Cart from "../views/addToCart.vue"
 import Payment from "../views/PaymentVie.vue"
 import MyAccount from "../views/MyAccount.vue"
 import Success from "../views/Success.vue"
+import Failed from "../views/Failed.vue"
 
 
 const routes = [
@@ -50,6 +51,11 @@ const routes = [
     path: '/success',
     name: 'Sucess',
     component: Success
+  },
+  {
+    path: '/failed',
+    name: 'Failed',
+    component: Failed
   },
   {
     path: '/about',
